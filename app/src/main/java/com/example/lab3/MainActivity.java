@@ -36,22 +36,21 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-    }
-
-    Intent intent = getIntent();
-    String msg = intent.getStringExtra("msg");
+        Intent intent = getIntent();
+        String msg = intent.getStringExtra("msg");
         if(msg != null)
 
-    {
-        if (msg.equals("cerrarSesion")) {
-            cerrarSesion();
+        {
+            if (msg.equals("cerrarSesion")) {
+                cerrarSesion();
+            }
         }
     }
-}
+
     private void cerrarSesion() {
         mGoogleSignInClient.signOut().addOnCompleteListener(this,
                 task -> updateUI(null));
-}
+    }
 
     public void iniciarSesion(View view) {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
