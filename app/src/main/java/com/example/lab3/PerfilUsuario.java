@@ -18,7 +18,6 @@ public class PerfilUsuario extends AppCompatActivity {
     Button btn_logout;
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_usuario);
@@ -37,11 +36,12 @@ public class PerfilUsuario extends AppCompatActivity {
         String photo = info_user.get("user_photo");
         Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
     }
+
     public void cerrarSesion(View view){
         FirebaseAuth.getInstance().signOut();
         finish();
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("msg", "cerrarSesion");
         startActivity(intent);
-         }
+    }
 }

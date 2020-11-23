@@ -38,10 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String msg = intent.getStringExtra("msg");
-        if(msg != null)
-
-        {
-            if (msg.equals("cerrarSesion")) {
+        if(msg != null) {
+            if (msg.equals("cerrarSesion")) { 
                 cerrarSesion();
             }
         }
@@ -98,8 +96,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, PerfilUsuario.class);
             intent.putExtra("info_user", info_user);
             startActivity(intent);
+
         } else {
             System.out.println("sin registrarse");
         }
     }
 }
+

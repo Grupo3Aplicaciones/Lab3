@@ -60,6 +60,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "733692107675-m4o05hpm4qcrmumitoth3dop0alffd1b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grupo6_ta3_iniciosesionfirebase",
+            "certificate_hash": "cc27f12b2a699feddbf037b44554b99aa39fe2d2"
+          }
+        },
+        {
           "client_id": "733692107675-kjrmj63kmjph8f6s7chbnsg3j5avm6mu.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

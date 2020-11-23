@@ -44,4 +44,3 @@
         android:onClick="cerrarSesion"
         android:text="Cerrar Sesion" />
 </LinearLayout>
-
