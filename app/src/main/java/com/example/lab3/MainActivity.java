@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth.signInWithCredential(credential).addOnCompleteListener(this, task -> {
             if (task.isSuccessful()) {
                 FirebaseUser user = mAuth.getCurrentUser();
+
                 updateUI(user);
             } else {
                 System.out.println("error");
@@ -91,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
             info_user.put("user_email", user.getEmail());
             info_user.put("user_photo", String.valueOf(user.getPhotoUrl()));
             info_user.put("user_id", user.getUid());
+            info_user.put("user_phone", user.getPhoneNumber());
+
+
 
             finish();
             Intent intent = new Intent(this, PerfilUsuario.class);
